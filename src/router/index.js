@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import home from '../pages/home.vue'
 import test from '../pages/test.vue'
+import input from '../components/Input.vue'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -18,6 +19,10 @@ const router = new VueRouter({
         {
             path: '/test',
             component: test
+        },
+        {
+            path: '/input',
+            component: input
         }
     ]
 })
