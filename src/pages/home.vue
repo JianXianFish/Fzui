@@ -1,13 +1,24 @@
 <template>
-    <div>
-        123456
-    </div>
+	<div>
+		<f-input v-model="inputValue" />
+		<p>message: {{ inputValue }}</p>
+	</div>
 </template>
 
 <script>
-    export default {
-        name: "home"
-    }
+	import fInput from '../components/Input.vue'
+
+	export default {
+		name: "home",
+		data () {
+			return {
+				inputValue: ""
+			}
+		},
+		components: {
+			fInput
+		}
+	}
 </script>
 
 <style scoped>
