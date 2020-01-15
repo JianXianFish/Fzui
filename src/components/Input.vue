@@ -1,12 +1,14 @@
 <template>
   <div>
-    <input type="text" v-bind="$attrs" :value="$attrs.value" @input="handleInput">
+    <input type="text" :value="value" @input="handleInput">
   </div>
 </template>
 
 <script>
   export default {
-    inheritAttrs: false,
+    props: [
+      'value',
+    ],
     methods: {
       handleInput (e) {
         this.$emit("input", e.target.value)
