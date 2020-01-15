@@ -1,7 +1,8 @@
 <template>
 	<div>
-		<f-input v-model="inputValue" />
+		<f-input v-model="inputValue" :text="inputValue"/>
 		<p>message: {{ inputValue }}</p>
+		<button @click="inputValue++">改变inputValue</button>
 	</div>
 </template>
 

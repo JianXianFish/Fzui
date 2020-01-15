@@ -1,13 +1,14 @@
 <template>
     <div>
-        <input type="text" :value="inputValue" @input="handleInput">
+        <input type="text" :value="text" @input="handleInput">
     </div>
 </template>
 
 <script>
     export default {
         props: [
-            'inputValue'
+            'inputValue',
+            'text'
         ],
         methods: {
             handleInput (e) {
